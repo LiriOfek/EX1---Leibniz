@@ -12,11 +12,14 @@ Purpose: This file run the program that get 3 variables
 #define DECIMAL (10)
 #define CHAR_ZERO ('0')
 #define NUMBER_OF_GRADES (3)
+#define LIMIT_OF_PASS_GRADE (55)
 
 #define STRING_FOR_ENTER_FIRST_NUMBER ("Enter first grade:     ")
 #define STRING_FOR_ENTER_SECOND_NUMBER ("Enter second grade:     ")
 #define STRING_FOR_ENTER_THIRD_NUMBER ("Eter third grade:     ")
 #define STRING_FOR_PRINT_AVERAGE ("Average: %f\n")
+#define FAIL ("Failed\n")
+#define PASS ("Passed\n")
 
 int get_number_from_user() {
 	/********************************************************\
@@ -93,4 +96,13 @@ void main() {
 	/*calculate the average of the numbers*/
 	average = calculate_average(first_grade, second_grade, third_grade);
 	printf(STRING_FOR_PRINT_AVERAGE, average);
+
+	/*check if the user pass or fail*/
+	if (LIMIT_OF_PASS_GRADE > average)
+	{
+		printf(FAIL);
+	}
+	else {
+		printf(PASS);
+	}
 }
