@@ -11,6 +11,12 @@ Purpose: This file run the program that get 3 variables
 #define ENTER ('\n')
 #define DECIMAL (10)
 #define CHAR_ZERO ('0')
+#define NUMBER_OF_GRADES (3)
+
+#define STRING_FOR_ENTER_FIRST_NUMBER ("Enter first grade:     ")
+#define STRING_FOR_ENTER_SECOND_NUMBER ("Enter second grade:     ")
+#define STRING_FOR_ENTER_THIRD_NUMBER ("Eter third grade:     ")
+#define STRING_FOR_PRINT_AVERAGE ("Average: %f\n")
 
 int get_number_from_user() {
 	/********************************************************\
@@ -60,13 +66,31 @@ float calculate_average(int first_number, int second_number, int third_number) {
 	*
 	* Author - Liri
 	\********************************************************/
+	int sum = INITIAL_NUMBER; /*the sum of the numbers*/
+	float average = INITIAL_NUMBER; /*the average of the numbers*/
+
+	sum = first_number + second_number + third_number;
+	average = (float)sum / (float)NUMBER_OF_GRADES;
+	return average;
 }
 
 
-
 void main() {
-	int grade = INITIAL_NUMBER;
-	printf("Enter grade: ");
-	grade = get_number_from_user();
-	printf("Your number is %d", grade);
+
+	int first_grade = INITIAL_NUMBER; /*the first grade the user enter*/
+	int second_grade = INITIAL_NUMBER; /*the second grade the user enter*/
+	int third_grade = INITIAL_NUMBER; /*the third greade the user enter*/
+	float average = INITIAL_NUMBER; /*the average of the grades*/
+
+	/*get three numbers from user*/
+	printf(STRING_FOR_ENTER_FIRST_NUMBER);
+	first_grade = get_number_from_user();
+	printf(STRING_FOR_ENTER_SECOND_NUMBER);
+	second_grade = get_number_from_user();
+	printf(STRING_FOR_ENTER_THIRD_NUMBER);
+	third_grade = get_number_from_user();
+
+	/*calculate the average of the numbers*/
+	average = calculate_average(first_grade, second_grade, third_grade);
+	printf(STRING_FOR_PRINT_AVERAGE, average);
 }
