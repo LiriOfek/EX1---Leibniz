@@ -40,6 +40,30 @@ int get_number_from_user() {
 	return number;
 }
 
+float calculate_average(int first_number, int second_number, int third_number) {
+	/********************************************************\
+	* Function name - calculate_average
+	*
+	* Function Purpose - calculate the average of the given numbers
+	*
+	* Parameters - IN int first_number - the first given number
+	*			   IN int second_number - the second given number
+	*			   IN int third_number - the third given number
+	*			   OUT float average - the average of the given numbers
+	*
+	* Return Value - the average of the given numbers
+	*
+	* Side Effects - this function has no side effects
+	*
+	* Semantics - calculate the average of the given numbers
+	*			  and return it.
+	*
+	* Author - Liri
+	\********************************************************/
+}
+
+
+
 void main() {
 	int grade = INITIAL_NUMBER;
 	printf("Enter grade: ");
