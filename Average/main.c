@@ -79,7 +79,25 @@ float calculate_average(int first_number, int second_number, int third_number) {
 
 
 void main() {
-
+	/********************************************************\
+	* Function name - main
+	*
+	* Function Purpose - get three numbers from user,
+	*					 calculate the average of them
+	*					 and check if the user pass or fail
+	*
+	* Parameters - no Input/Output parameters
+	*
+	* Return Value - there isn't return value
+	*
+	* Side Effects - this function has no side effects
+	*
+	* Semantics - get three numbers from user,
+	*			  print the average
+	*			  and print if the user pass or fail
+	*
+	* Author - Liri
+	\********************************************************/
 	int first_grade = INITIAL_NUMBER; /*the first grade the user enter*/
 	int second_grade = INITIAL_NUMBER; /*the second grade the user enter*/
 	int third_grade = INITIAL_NUMBER; /*the third greade the user enter*/
