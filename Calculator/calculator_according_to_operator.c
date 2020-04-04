@@ -2,7 +2,9 @@
 
 #define INITIAL_NUMBER (0)
 
-float calculate_expression(int first_number, int second_number, char operator) {
+float calculate_expression(int first_number, 
+							int second_number, 
+							char operator) {
 	float result = INITIAL_NUMBER; /*the result of the expression*/
 	switch (operator)
 	{
