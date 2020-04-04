@@ -49,7 +49,9 @@ int get_number_from_user() {
 	return number;
 }
 
-float calculate_average(int first_number, int second_number, int third_number) {
+float calculate_average(int first_number, 
+						int second_number, 
+						int third_number) {
 	/********************************************************\
 	* Function name - calculate_average
 	*
@@ -112,7 +114,9 @@ void main() {
 	third_grade = get_number_from_user();
 
 	/*calculate the average of the numbers*/
-	average = calculate_average(first_grade, second_grade, third_grade);
+	average = calculate_average(first_grade, 
+								second_grade, 
+								third_grade);
 	printf(STRING_FOR_PRINT_AVERAGE, average);
 
 	/*check if the user pass or fail*/
