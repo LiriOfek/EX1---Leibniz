@@ -6,7 +6,9 @@ Purpose: This file calculate the result of the given expression
 
 #include <stdio.h>
 
-float calculate_expression(int first_number, int second_number, char operator);
+float calculate_expression(int first_number,
+							int second_number, 
+							char operator);
 /********************************************************\
 * Function name - calculate_expression
 *
