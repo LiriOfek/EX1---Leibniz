@@ -15,34 +15,6 @@ Purpose: This file run the program that get 2 numbers and operator
 #define STRING_FOR_ENTER_SECOND_NUMBER ("Enter second number:     ")
 #define STRING_FOR_ENTER_OPERATR ("Enter operator:     ")
 
-int get_number_from_user() {
-	/********************************************************\
-	* Function name - get_number_from_user
-	*
-	* Function Purpose - get the number that the user type
-	*
-	* Parameters - OUT int number - the number that the user type
-	*
-	* Return Value - the number that the user type
-	*
-	* Side Effects - this function has no side effects
-	*
-	* Semantics - this function get the number that the user types
-	*			  and return it.
-	*
-	* Author - Liri
-	\********************************************************/
-	int number = INITIAL_NUMBER; /*the total number the user enter*/
-	int char_from_user; /*the next char from user*/
-
-	while ((char_from_user = getchar()) != ENTER) {
-		/*multiply the digits seen already by 10 and
-		add the decimal value of the new digit*/
-		number = number * DECIMAL + (char_from_user - CHAR_ZERO);
-	}
-	return number;
-}
-
 void main() {
 	/********************************************************\
 	* Function name - main
