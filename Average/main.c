@@ -44,8 +44,8 @@ float calculate_average(int first_number,
 	*
 	* Author - Liri
 	\********************************************************/
-	int sum = INITIAL_NUMBER; /*the sum of the numbers*/
-	float average = INITIAL_NUMBER; /*the average of the numbers*/
+	int sum = INITIAL_NUMBER; 
+	float average = INITIAL_NUMBER; 
 
 	sum = first_number + second_number + third_number;
 	average = (float)sum / (float)NUMBER_OF_GRADES;
@@ -73,10 +73,10 @@ void main() {
 	*
 	* Author - Liri
 	\********************************************************/
-	int first_grade = INITIAL_NUMBER; /*the first grade the user enter*/
-	int second_grade = INITIAL_NUMBER; /*the second grade the user enter*/
-	int third_grade = INITIAL_NUMBER; /*the third greade the user enter*/
-	float average = INITIAL_NUMBER; /*the average of the grades*/
+	int first_grade = INITIAL_NUMBER; 
+	int second_grade = INITIAL_NUMBER; 
+	int third_grade = INITIAL_NUMBER; 
+	float average = INITIAL_NUMBER; 
 
 	/*get three numbers from user*/
 	printf(STRING_FOR_ENTER_FIRST_NUMBER);
