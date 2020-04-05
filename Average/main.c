@@ -5,8 +5,7 @@ Purpose: This file run the program that get 3 variables
 	     from user and calculate their average.
 \********************************************************/
 
-#include <stdio.h>
-
+#define _CRT_SECURE_NO_WARNINGS
 #define INITIAL_NUMBER (0)
 #define ENTER ('\n')
 #define DECIMAL (10)
@@ -21,33 +20,7 @@ Purpose: This file run the program that get 3 variables
 #define FAIL ("Failed\n")
 #define PASS ("Passed\n")
 
-int get_number_from_user() {
-	/********************************************************\
-	* Function name - get_number_from_user
-	*
-	* Function Purpose - get the number that the user type
-	*
-	* Parameters - OUT integer number - the number that the user type
-	*
-	* Return Value - the number that the user type
-	*
-	* Side Effects - this function has no side effects
-	*
-	* Semantics - this function get the number that the user types
-	*			  and return it.
-	*
-	* Author - Liri
-	\********************************************************/
-	int number = INITIAL_NUMBER; /*the total number the user enter*/
-	int char_from_user; /*the next char from user*/
-
-	while ((char_from_user = getchar()) != ENTER) {
-		/*multiply the digits seen already by 10 and
-		add the decimal value of the new digit*/
-		number = number * DECIMAL + (char_from_user - CHAR_ZERO);
-	}
-	return number;
-}
+#include <stdio.h>
 
 float calculate_average(int first_number, 
 						int second_number, 
@@ -107,11 +80,11 @@ void main() {
 
 	/*get three numbers from user*/
 	printf(STRING_FOR_ENTER_FIRST_NUMBER);
-	first_grade = get_number_from_user();
+	scanf("%d", &first_grade);
 	printf(STRING_FOR_ENTER_SECOND_NUMBER);
-	second_grade = get_number_from_user();
+	scanf("%d", &second_grade);
 	printf(STRING_FOR_ENTER_THIRD_NUMBER);
-	third_grade = get_number_from_user();
+	scanf("%d", &third_grade);
 
 	/*calculate the average of the numbers*/
 	average = calculate_average(first_grade, 
