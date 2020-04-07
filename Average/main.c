@@ -5,7 +5,6 @@ Purpose: This file run the program that get 3 variables
 	     from user and calculate their average.
 \********************************************************/
 
-#define _CRT_SECURE_NO_WARNINGS
 #define INITIAL_NUMBER (0)
 #define ENTER ('\n')
 #define DECIMAL (10)
@@ -80,11 +79,11 @@ void main() {
 
 	/*get three numbers from user*/
 	printf(STRING_FOR_ENTER_FIRST_NUMBER);
-	scanf("%d", &first_grade);
+	scanf_s("%d", &first_grade);
 	printf(STRING_FOR_ENTER_SECOND_NUMBER);
-	scanf("%d", &second_grade);
+	scanf_s("%d", &second_grade);
 	printf(STRING_FOR_ENTER_THIRD_NUMBER);
-	scanf("%d", &third_grade);
+	scanf_s("%d", &third_grade);
 
 	/*calculate the average of the numbers*/
 	average = calculate_average(first_grade, 
