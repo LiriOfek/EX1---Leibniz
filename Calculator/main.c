@@ -4,7 +4,6 @@ Author: Liri (4/4/2020)
 Purpose: This file run the program that get 2 numbers and operator
 		 from user and calculate the result of the expression.
 \********************************************************/
-#define _CRT_SECURE_NO_WARNINGS
 #define INITIAL_NUMBER (0)
 #define ENTER ('\n')
 #define DECIMAL (10)
@@ -40,9 +39,9 @@ void main() {
 
 	/*get two numbers and operator from user*/
 	printf(STRING_FOR_ENTER_FIRST_NUMBER);
-	scanf("%d", &first_number);
+	scanf_s("%d", &first_number);
 	printf(STRING_FOR_ENTER_SECOND_NUMBER);
-	scanf("%d", &second_number);
+	scanf_s("%d", &second_number);
 	/*catch the \n*/
 	getchar();
 	printf(STRING_FOR_ENTER_OPERATR);
